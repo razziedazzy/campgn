@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>products - campgn</title>
+  <link rel="icon" type="image/x-icon" href="https://cdn.creazilla.com/icons/3256216/rounded-letter-c-icon-md.png">
+  <style>
+    /* Reset & Base */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #111;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      background-color: transparent;
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      font-size: 1.5rem;
+      z-index: 10;
+      color: #111;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      text-transform: none;
+      color: #111;
+    }
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: #111;
+      font-weight: 600;
+      font-size: 1rem;
+      text-transform: none;
+      transition: color 0.3s ease;
+    }
+    nav a:hover { color: #555; }
+
+    /* Main content container */
+    main {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+    }
+
+    /* Products grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    /* Each product card */
+    .product {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .product:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgb(0 0 0 / 0.15);
+    }
+
+    .product img {
+      width: 100%;
+      height: 220px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      background-color: #fff;
+    }
+
+    .product h3 {
+      font-weight: 800;
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      color: #111;
+    }
+
+    .product p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      color: #444;
+      min-height: 3em;
+    }
+
+    /* See Details button */
+    .buy-link {
+      padding: 1rem 2rem;
+      background-color: #fff;
+      color: #111;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 2px solid #111;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      width: fit-content;
+    }
+    .buy-link:hover {
+      background-color: #111;
+      color: #fff;
+      border-color: #111;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.85rem;
+      color: #555;
+      background: #f5f5f5;
+      margin-top: 4rem;
+    }
+    footer a {
+      color: #111;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">campgn</div>
+    <nav>
+      <a href="index.html">home</a>
+      <a href="products.html">products</a>
+      <a href="contact.html">contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="products-grid">
+      <div class="product">
+        <img src="https://i.ibb.co/20MQFcr0/image-removebg-preview.png" alt="Urban Runner Shoe" />
+        <h3>Urban Runner</h3>
+        <p>Lightweight, breathable, and designed for everyday movement. The Urban Runner combines modern style with all-day comfort for city life.</p>
+        <a href="UR1.html" class="buy-link">See Details</a>
+      </div>
+
+      <div class="product">
+        <img src="https://i.ibb.co/vxB3mnps/4.png" alt="Sport Flex Shoe" />
+        <h3>Sport Flex</h3>
+        <p>Engineered for performance and speed, the Sport Flex adapts to your every move with responsive cushioning and support.</p>
+        <a href="SF1.html" class="buy-link">See Details</a>
+      </div>
+
+      <div class="product">
+        <img src="https://i.ibb.co/sJXp0RjL/3.png" alt="Dress Wear Shoe" />
+        <h3>Dress Wear</h3>
+        <p>Durable and rugged, perfect for weddings and business alike. Dress Wear blends classic style with modern comfort.</p>
+        <a href="DS1.html" class="buy-link">See Details</a>
+      </div>
+
+      <div class="product">
+        <img src="https://i.ibb.co/d4NtN69m/2.png" alt="Classic Comfort Shoe" />
+        <h3>Classic Comfort</h3>
+        <p>Timeless design meets all-day comfort. Classic Comfort is your go-to shoe for everyday wear and effortless style.</p>
+        <a href="CC1.html" class="buy-link">See Details</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Contact us: <a href="mailto:support@campgnshoes.com">support@campgnshoes.com</a></p>
+    <p>&copy; 2025 Campgn Shoes</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sport flex - campgn</title>
+  <link rel="icon" type="image/x-icon" href="https://cdn.creazilla.com/icons/3256216/rounded-letter-c-icon-md.png">
+  <style>
+    /* Reset & Base */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; width: 100%; overflow-x: hidden; }
+    body { font-family: Arial, sans-serif; background-color: #f5f5f5; color: #111; line-height: 1.5; overflow-x: hidden; }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      background-color: transparent;
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      font-size: 1.5rem;
+      z-index: 10;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      text-transform: none;
+    }
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: #111;
+      font-weight: 600;
+      font-size: 1rem;
+      text-transform: none;
+    }
+    nav a:hover { color: #555; }
+
+    /* Hero / Product Section */
+    .product-section { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 1200px; margin: 4rem auto; padding: 0 1rem; }
+    .product-image img { width: 100%; max-width: 800px; border-radius: 8px; }
+    .product-info { display: flex; flex-direction: column; justify-content: center; }
+    .product-info h1 { font-size: 2.5rem; font-weight: 800; text-transform: uppercase; margin-bottom: 1rem; }
+    .product-info p { font-size: 1.125rem; margin-bottom: 1.5rem; color: #333; }
+    .features { list-style: none; margin-bottom: 2rem; }
+    .features li { margin-bottom: 0.75rem; font-size: 1rem; }
+    .buy-button { align-self: start; padding: 1rem 2rem; background-color: #111; color: #fff; border: none; border-radius: 4px; font-size: 1rem; font-weight: 700; text-transform: uppercase; cursor: pointer; }
+    .buy-button:hover { background-color: #333; }
+
+    /* Color & Size Options */
+    .options { display: flex; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
+    .colors, .sizes { display: flex; }
+    .colors button, .sizes button {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      border: 1px solid #ccc;
+      background: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: 0.875rem;
+    }
+    .colors button.active, .sizes button.active {
+      border-color: #111;
+      font-weight: 700;
+    }
+
+    /* Tech Specs Section */
+    .tech-section { background-color: #fff; padding: 4rem 1rem; margin-top: 4rem; }
+    .tech-section h2 { text-align: center; font-size: 2rem; font-weight: 700; margin-bottom: 2rem; text-transform: uppercase; }
+    .specs { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 2rem; max-width: 1000px; margin: auto; }
+    .spec-card { text-align: center; }
+    .spec-card h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .spec-card p { font-size: 0.95rem; color: #555; }
+
+    /* Reviews */
+    .reviews-section { padding: 2rem 1rem; position: relative; max-width: 1200px; margin: 2rem auto; }
+    .reviews-section h2 { font-size: 1.75rem; font-weight: 700; margin-bottom: 1.5rem; text-transform: uppercase; text-align: center; }
+    .scroll-track { display: flex; width: max-content; animation: scroll-left 30s linear infinite; }
+    .reviews-section:hover .scroll-track { animation-play-state: paused; }
+    .review { background-color: #111; color: #fff; padding: 1.5rem; margin-right: 1.5rem; border-radius: 8px; width: 280px; flex-shrink: 0; }
+    .review strong { display: block; margin-bottom: 0.5rem; font-size: 1rem; text-transform: uppercase; }
+
+    @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+    /* Footer */
+    footer { text-align: center; padding: 2rem 1rem; font-size: 0.85rem; color: #555; background: #f5f5f5; }
+    footer a { color: #111; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">campgn</div>
+    <nav>
+      <a href="index.html">home</a>
+      <a href="products.html">products</a>
+      <a href="contact.html">contact</a>
+    </nav>
+  </header>
+
+  <section id="products" class="product-section">
+    <div class="product-image">
+      <img src="https://i.ibb.co/vxB3mnps/4.png" alt="Sport Flex Shoe">
+    </div>
+    <div class="product-info">
+      <h1>Sport Flex</h1>
+      <p>Engineered for performance and agility. Sport Flex offers flexible support and superior traction to keep you moving at your best.</p>
+      <ul class="features">
+        <li>- Breathable mesh upper for ventilation</li>
+        <li>- Flexible TPU overlays for dynamic support</li>
+        <li>- EVA midsole for lightweight cushioning</li>
+        <li>- High-traction rubber outsole for grip</li>
+      </ul>
+      <div class="options">
+        <div class="colors">
+          <button class="active">Blue</button>
+          <button>Red</button>
+          <button>Grey</button>
+        </div>
+        <div class="sizes">
+          <button>7</button>
+          <button class="active">8</button>
+          <button>9</button>
+          <button>10</button>
+          <button>11</button>
+        </div>
+      </div>
+      <button class="buy-button">Buy Now</button>
+    </div>
+  </section>
+
+  <section id="tech" class="tech-section">
+    <h2>Technology</h2>
+    <div class="specs">
+      <div class="spec-card">
+        <h3>Mesh Upper</h3>
+        <p>Maximizes airflow to keep feet cool during intense activity.</p>
+      </div>
+      <div class="spec-card">
+        <h3>TPU Overlays</h3>
+        <p>Provide dynamic support without restricting movement.</p>
+      </div>
+      <div class="spec-card">
+        <h3>EVA Midsole</h3>
+        <p>Lightweight cushioning that absorbs impact efficiently.</p>
+      </div>
+      <div class="spec-card">
+        <h3>Rubber Outsole</h3>
+        <p>Durable grip for confident traction on varied surfaces.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="reviews-section">
+    <h2>Customer Reviews</h2>
+    <div class="scroll-track">
+      <div class="review"><strong>Chris D.</strong><p>Lightweight and super flexible. Perfect for my workouts!</p></div>
+      <div class="review"><strong>Jamie F.</strong><p>Great grip and support. I feel more confident on my runs.</p></div>
+      <div class="review"><strong>Pat S.</strong><p>Breathable and comfy, I can wear these all day.</p></div>
+      <div class="review"><strong>Alex H.</strong><p>The TPU overlays really help with stability. Love these shoes.</p></div>
+      <!-- Repeat for scroll effect -->
+      <div class="review"><strong>Chris D.</strong><p>Lightweight and super flexible. Perfect for my workouts!</p></div>
+      <div class="review"><strong>Jamie F.</strong><p>Great grip and support. I feel more confident on my runs.</p></div>
+      <div class="review"><strong>Pat S.</strong><p>Breathable and comfy, I can wear these all day.</p></div>
+      <div class="review"><strong>Alex H.</strong><p>The TPU overlays really help with stability. Love these shoes.</p></div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>Contact us: <a href="mailto:support@campgnshoes.com">support@campgnshoes.com</a></p>
+    <p>&copy; 2025 Campgn Shoes</p>
+  </footer>
+</body>
+</html>
