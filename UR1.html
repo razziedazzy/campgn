@@ -93,6 +93,24 @@
   </style>
 </head>
 <body>
+  <script>
+  // Handle color button selection
+  document.querySelectorAll('.colors button').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.colors button').forEach(b => b.classList.remove('active'));
+      button.classList.add('active');
+    });
+  });
+
+  // Handle size button selection
+  document.querySelectorAll('.sizes button').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.sizes button').forEach(b => b.classList.remove('active'));
+      button.classList.add('active');
+    });
+  });
+</script>
+
   <header>
     <div class="logo">campgn</div>
     <nav>
