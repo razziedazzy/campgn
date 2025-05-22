@@ -92,6 +92,28 @@
   </style>
 </head>
 <body>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Handle color selection
+    const colorButtons = document.querySelectorAll('.colors button');
+    colorButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        colorButtons.forEach(b => b.classList.remove('active'));
+        button.classList.add('active');
+      });
+    });
+
+    // Handle size selection
+    const sizeButtons = document.querySelectorAll('.sizes button');
+    sizeButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        sizeButtons.forEach(b => b.classList.remove('active'));
+        button.classList.add('active');
+      });
+    });
+  });
+</script>
+
   <header>
     <div class="logo">campgn</div>
     <nav>
